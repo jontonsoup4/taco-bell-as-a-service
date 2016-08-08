@@ -7,6 +7,6 @@ func NewRouter() *mux.Router {
 	api := router.PathPrefix("/api").Subrouter();
 	api.HandleFunc("/optimizer/{amount}", Optimizer)
 	api.HandleFunc("/menu/{type}", MenuHandler)
-	api.HandleFunc("/sort/{type}", SortHandler)
+	api.HandleFunc("/sort/{type}/{sortby}", SortHandler)
 	return router
 }

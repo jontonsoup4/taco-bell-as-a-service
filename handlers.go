@@ -8,6 +8,7 @@ import (
 	"strconv"
 
 	"github.com/gorilla/mux"
+	"strings"
 )
 
 func MenuHandler(w http.ResponseWriter, r *http.Request) {
@@ -38,10 +39,20 @@ func SortHandler(w http.ResponseWriter, r *http.Request)  {
 	if err != nil {
 		return
 	}
+	sortByFilter := strings.ToLower(vars["sortby"]);
+	if sortByFilter == "" {
+		sortByFilter = "calories";
+	} else if !stringInSlice(sortByFilter, SortByOptions){
+		json.NewEncoder(w).Encode(jsonErr{
+			Code: http.StatusNotFound,
+			Text: fmt.Sprintf("No filter by that name. Try: %q", SortByOptions),
+		});
+		return
+	}
 	itemsMap := make(map[float64]Item);
 	keys := make([]float64, len(items));
 	for index, item := range items {
-		value := item.Cost/float64(item.Calories);
+		value := item.Cost/sortBy(sortByFilter, item);
 		itemsMap[value] = item;
 		keys[index] = value;
 	}

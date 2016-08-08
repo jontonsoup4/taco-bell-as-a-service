@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"net/http"
 	"errors"
+	"fmt"
 )
 
 func LoadJSON(w http.ResponseWriter, filename string) (Items, error) {
@@ -12,7 +13,7 @@ func LoadJSON(w http.ResponseWriter, filename string) (Items, error) {
 	if err != nil {
 		json.NewEncoder(w).Encode(jsonErr{
 			Code:http.StatusNotFound,
-			Text: "Invalid endpoint: " + filename,
+			Text: fmt.Sprintf("'%s' is not a valid endpoint.", filename),
 		});
 		return Items{}, errors.New("NotFound");
 	}
