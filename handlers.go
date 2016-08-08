@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"net/http"
 	"sort"
-	"strconv"
 	"strings"
 
 	"github.com/gorilla/mux"
@@ -30,7 +29,7 @@ func SortHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	propertyName := getPropertyName(strings.ToLower(vars["property"]));
-	if !stringInSlice(vars["sortby"], SortByOptions){
+	if propertyName == ""{
 		json.NewEncoder(w).Encode(jsonErr{
 			Code: http.StatusNotFound,
 			Text: fmt.Sprintf("No filter by that name. Try: %q", SortByOptions),
@@ -58,6 +57,13 @@ func ValueHandler(w http.ResponseWriter, r *http.Request) {
 	itemsMap := make(map[float64]Item);
 	keys := make([]float64, len(items));
 	propertyName := getPropertyName(strings.ToLower(vars["property"]));
+	if propertyName == ""{
+		json.NewEncoder(w).Encode(jsonErr{
+			Code: http.StatusNotFound,
+			Text: fmt.Sprintf("No filter by that name. Try: %q", SortByOptions),
+		});
+		return
+	}
 	for index, item := range items {
 		propVal, _ := reflections.GetField(item, propertyName);
 		var value float64;
