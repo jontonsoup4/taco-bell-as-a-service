@@ -3,12 +3,25 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"io/ioutil"
 	"net/http"
 	"sort"
 	"strconv"
 
 	"github.com/gorilla/mux"
 )
+
+func DisplayAll(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json; charset=UTF-8");
+	raw, err := ioutil.ReadFile("./menu/items.json")
+	if err != nil {
+		fmt.Fprint(w, err.Error())
+		return
+	}
+	var output Items;
+	json.Unmarshal(raw, &output)
+	json.NewEncoder(w).Encode(output);
+}
 
 func Optimizer(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8");
