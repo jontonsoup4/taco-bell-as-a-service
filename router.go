@@ -13,5 +13,6 @@ func NewRouter() *mux.Router {
 	api.HandleFunc("/optimizer/{amount}", Optimizer)
 	api.HandleFunc("/menu/{type}", MenuHandler)
 	api.HandleFunc("/sort/{type}/{sortby}", SortHandler)
+	api.HandleFunc("/value/{type}/{sortby}", ValueHandler)
 	return router
 }

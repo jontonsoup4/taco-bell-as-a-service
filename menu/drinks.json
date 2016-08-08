@@ -9,7 +9,7 @@
     "transFat": 0,
     "cholesterol": 0,
     "sodium": 125,
-    "totalCarbohydrates": 55,
+    "Carbohydrates": 55,
     "dietaryFiber": 0,
     "sugars": 55,
     "protein": 0
@@ -24,7 +24,7 @@
     "transFat": 0,
     "cholesterol": 0,
     "sodium": 65,
-    "totalCarbohydrates": 33,
+    "Carbohydrates": 33,
     "dietaryFiber": 0,
     "sugars": 33,
     "protein": 0
@@ -39,7 +39,7 @@
     "transFat": 0,
     "cholesterol": 0,
     "sodium": 45,
-    "totalCarbohydrates": 48,
+    "Carbohydrates": 48,
     "dietaryFiber": 0,
     "sugars": 48,
     "protein": 0
@@ -54,7 +54,7 @@
     "transFat": 0,
     "cholesterol": 0,
     "sodium": 60,
-    "totalCarbohydrates": 60,
+    "Carbohydrates": 60,
     "dietaryFiber": 0,
     "sugars": 60,
     "protein": 0
@@ -69,7 +69,7 @@
     "transFat": 0,
     "cholesterol": 0,
     "sodium": 80,
-    "totalCarbohydrates": 0,
+    "Carbohydrates": 0,
     "dietaryFiber": 0,
     "sugars": 0,
     "protein": 0
@@ -84,7 +84,7 @@
     "transFat": 0,
     "cholesterol": 0,
     "sodium": 130,
-    "totalCarbohydrates": 0,
+    "Carbohydrates": 0,
     "dietaryFiber": 0,
     "sugars": 0,
     "protein": 0
@@ -99,7 +99,7 @@
     "transFat": 0,
     "cholesterol": 0,
     "sodium": 95,
-    "totalCarbohydrates": 0,
+    "Carbohydrates": 0,
     "dietaryFiber": 0,
     "sugars": 0,
     "protein": 0
@@ -114,7 +114,7 @@
     "transFat": 0,
     "cholesterol": 0,
     "sodium": 200,
-    "totalCarbohydrates": 132,
+    "Carbohydrates": 132,
     "dietaryFiber": 0,
     "sugars": 128,
     "protein": 0
@@ -129,7 +129,7 @@
     "transFat": 0,
     "cholesterol": 0,
     "sodium": 150,
-    "totalCarbohydrates": 100,
+    "Carbohydrates": 100,
     "dietaryFiber": 0,
     "sugars": 95,
     "protein": 0
@@ -144,7 +144,7 @@
     "transFat": 0,
     "cholesterol": 0,
     "sodium": 150,
-    "totalCarbohydrates": 0,
+    "Carbohydrates": 0,
     "dietaryFiber": 0,
     "sugars": 0,
     "protein": 0
@@ -159,7 +159,7 @@
     "transFat": 0,
     "cholesterol": 0,
     "sodium": 125,
-    "totalCarbohydrates": 145,
+    "Carbohydrates": 145,
     "dietaryFiber": 0,
     "sugars": 140,
     "protein": 0
@@ -174,7 +174,7 @@
     "transFat": 0,
     "cholesterol": 0,
     "sodium": 130,
-    "totalCarbohydrates": 109,
+    "Carbohydrates": 109,
     "dietaryFiber": 0,
     "sugars": 109,
     "protein": 0
@@ -189,7 +189,7 @@
     "transFat": 0,
     "cholesterol": 0,
     "sodium": 70,
-    "totalCarbohydrates": 58,
+    "Carbohydrates": 58,
     "dietaryFiber": 0,
     "sugars": 54,
     "protein": 0
@@ -204,7 +204,7 @@
     "transFat": 0,
     "cholesterol": 0,
     "sodium": 85,
-    "totalCarbohydrates": 72,
+    "Carbohydrates": 72,
     "dietaryFiber": 0,
     "sugars": 67,
     "protein": 0
@@ -219,7 +219,7 @@
     "transFat": 0,
     "cholesterol": 0,
     "sodium": 150,
-    "totalCarbohydrates": 145,
+    "Carbohydrates": 145,
     "dietaryFiber": 0,
     "sugars": 145,
     "protein": 0
@@ -234,7 +234,7 @@
     "transFat": 0,
     "cholesterol": 0,
     "sodium": 70,
-    "totalCarbohydrates": 22,
+    "Carbohydrates": 22,
     "dietaryFiber": 0,
     "sugars": 20,
     "protein": 0
@@ -249,7 +249,7 @@
     "transFat": 0,
     "cholesterol": 0,
     "sodium": 110,
-    "totalCarbohydrates": 60,
+    "Carbohydrates": 60,
     "dietaryFiber": 0,
     "sugars": 60,
     "protein": 0
@@ -264,7 +264,7 @@
     "transFat": 0,
     "cholesterol": 0,
     "sodium": 75,
-    "totalCarbohydrates": 130,
+    "Carbohydrates": 130,
     "dietaryFiber": 0,
     "sugars": 130,
     "protein": 0
@@ -279,7 +279,7 @@
     "transFat": 0,
     "cholesterol": 0,
     "sodium": 100,
-    "totalCarbohydrates": 140,
+    "Carbohydrates": 140,
     "dietaryFiber": 0,
     "sugars": 140,
     "protein": 0
@@ -294,7 +294,7 @@
     "transFat": 0,
     "cholesterol": 0,
     "sodium": 0,
-    "totalCarbohydrates": 0,
+    "Carbohydrates": 0,
     "dietaryFiber": 0,
     "sugars": 0,
     "protein": 2
@@ -309,7 +309,7 @@
     "transFat": 0,
     "cholesterol": 0,
     "sodium": 0,
-    "totalCarbohydrates": 3,
+    "Carbohydrates": 3,
     "dietaryFiber": 0,
     "sugars": 3,
     "protein": 2
@@ -324,7 +324,7 @@
     "transFat": 0,
     "cholesterol": 0,
     "sodium": 100,
-    "totalCarbohydrates": 135,
+    "Carbohydrates": 135,
     "dietaryFiber": 0,
     "sugars": 135,
     "protein": 0
@@ -339,7 +339,7 @@
     "transFat": 0,
     "cholesterol": 0,
     "sodium": 20,
-    "totalCarbohydrates": 56,
+    "Carbohydrates": 56,
     "dietaryFiber": 0,
     "sugars": 54,
     "protein": 0
@@ -354,7 +354,7 @@
     "transFat": 0,
     "cholesterol": 0,
     "sodium": 25,
-    "totalCarbohydrates": 70,
+    "Carbohydrates": 70,
     "dietaryFiber": 0,
     "sugars": 67,
     "protein": 0
@@ -369,7 +369,7 @@
     "transFat": 0,
     "cholesterol": 0,
     "sodium": 20,
-    "totalCarbohydrates": 32,
+    "Carbohydrates": 32,
     "dietaryFiber": 0,
     "sugars": 28,
     "protein": 2
@@ -384,7 +384,7 @@
     "transFat": 0,
     "cholesterol": 0,
     "sodium": 260,
-    "totalCarbohydrates": 68,
+    "Carbohydrates": 68,
     "dietaryFiber": 0,
     "sugars": 68,
     "protein": 0
