@@ -22,18 +22,8 @@ func MenuHandler(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(output);
 }
 
-func Optimizer(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "application/json; charset=UTF-8");
-	vars := mux.Vars(r);
-	_, err := strconv.ParseFloat(vars["amount"], 64);
-	if err != nil {
-		fmt.Fprint(w, err);
-		return;
-	}
-	json.NewEncoder(w).Encode(vars);
-}
-
 func SortHandler(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json; charset=UTF-8");
 	vars := mux.Vars(r);
 	items, err := LoadJSON(w, vars["type"]);
 	if err != nil {
@@ -59,6 +49,7 @@ func SortHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func ValueHandler(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json; charset=UTF-8");
 	vars := mux.Vars(r);
 	items, err := LoadJSON(w, vars["type"]);
 	if err != nil {
