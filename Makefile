@@ -7,7 +7,6 @@ default: run
 build:
 	go build -o build/${NAME}
 
-
 clean:
 	rm -rf build
 
