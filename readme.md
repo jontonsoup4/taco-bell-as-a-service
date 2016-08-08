@@ -1,6 +1,11 @@
 # taco-bell-optimizer
 An API server that returns information on items from the Taco Bell menu.
 
+# Usage:
+```
+go build
+./taco-bell-optimizer
+```
 
 # Available Endpoints:
 ```
