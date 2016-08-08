@@ -10,7 +10,7 @@ type Item struct {
 	TransFat		int	`json:"transFat"`
 	Cholesterol		int	`json:"cholesterol"`
 	Sodium			int	`json:"sodium"`
-	TotalCarbohydrates	int	`json:"totalCarbohydrates"`
+	TotalCarbohydrates	int	`json:"carbohydrates"`
 	DietaryFiber		int	`json:"dietaryFiber"`
 	Sugars			int	`json:"subars"`
 	Protein			int	`json:"protein"`
