@@ -24,7 +24,10 @@ func MenuHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	raw, err := ioutil.ReadFile("./menu/" + filename + ".json")
 	if err != nil {
-		fmt.Fprint(w, err.Error())
+		json.NewEncoder(w).Encode(jsonErr{
+			Code:http.StatusInternalServerError,
+			Text: err.Error(),
+		});
 		return
 	}
 	var output Items;
