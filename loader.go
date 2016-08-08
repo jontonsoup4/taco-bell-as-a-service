@@ -8,21 +8,13 @@ import (
 )
 
 func LoadJSON(w http.ResponseWriter, filename string) (Items, error) {
-	allowed := []string{"all", "drinks", "food", "sauces"};
-	if !stringInSlice(filename, allowed){
-		json.NewEncoder(w).Encode(jsonErr{
-			Code:http.StatusNotFound,
-			Text: "'" + filename + "' not found. Try available paths: all, drinks, food, sauces.",
-		});
-		return Items{}, errors.New("NotFound");
-	}
 	raw, err := ioutil.ReadFile("./menu/" + filename + ".json");
 	if err != nil {
 		json.NewEncoder(w).Encode(jsonErr{
-			Code:http.StatusInternalServerError,
-			Text: err.Error(),
+			Code:http.StatusNotFound,
+			Text: "Invalid endpoint: " + filename,
 		});
-		return Items{}, errors.New("InternalServerError");
+		return Items{}, errors.New("NotFound");
 	}
 	var output Items;
 	json.Unmarshal(raw, &output);
