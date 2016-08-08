@@ -16,7 +16,7 @@
   },
   {
     "name": "Bean Burrito",
-    "cost": null,
+    "cost": 1.19,
     "calories": 370,
     "caloriesFromFat": 100,
     "totalFat": 11,
