@@ -11,7 +11,7 @@ make
 # Available Endpoints:
 ```
 api/menu/{type}                returns all of type
-api/sort/{type}/{property}     returns type sorted by 
+api/sort/{type}/{property}     returns type sorted by property
 api/value/{type}/{property}    returns type sorted by (cost / sortby)
     
 ?reverse=true                  reverses order
