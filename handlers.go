@@ -11,9 +11,18 @@ import (
 	"github.com/gorilla/mux"
 )
 
-func DisplayAll(w http.ResponseWriter, r *http.Request) {
+func MenuHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8");
-	raw, err := ioutil.ReadFile("./menu/items.json")
+	filename := mux.Vars(r)["type"];
+	allowed := []string{"all", "drinks", "food", "sauces"};
+	if !stringInSlice(filename, allowed){
+		json.NewEncoder(w).Encode(jsonErr{
+			Code:http.StatusNotFound,
+			Text: "'" + filename + "' not found. Try available paths: all, drinks, food, sauces.",
+		});
+		return
+	}
+	raw, err := ioutil.ReadFile("./menu/" + filename + ".json")
 	if err != nil {
 		fmt.Fprint(w, err.Error())
 		return
