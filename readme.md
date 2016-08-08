@@ -12,7 +12,7 @@ make
 ```
 api/menu/{type}                returns all of type
 api/sort/{type}/{property}     returns type sorted by property
-api/value/{type}/{property}    returns type sorted by (cost / sortby)
+api/value/{type}/{property}    returns type sorted by (cost / property)
     
 ?reverse=true                  reverses order
     
