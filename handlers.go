@@ -29,7 +29,7 @@ func SortHandler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		return
 	}
-	propertyName := getPropertyName(strings.ToLower(vars["sortby"]));
+	propertyName := getPropertyName(strings.ToLower(vars["property"]));
 	if !stringInSlice(vars["sortby"], SortByOptions){
 		json.NewEncoder(w).Encode(jsonErr{
 			Code: http.StatusNotFound,
@@ -57,7 +57,7 @@ func ValueHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	itemsMap := make(map[float64]Item);
 	keys := make([]float64, len(items));
-	propertyName := getPropertyName(strings.ToLower(vars["sortby"]));
+	propertyName := getPropertyName(strings.ToLower(vars["property"]));
 	for index, item := range items {
 		propVal, _ := reflections.GetField(item, propertyName);
 		var value float64;

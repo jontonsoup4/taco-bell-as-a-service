@@ -10,9 +10,8 @@ func NewRouter() *mux.Router {
 	router := mux.NewRouter().StrictSlash(true)
 	router.NotFoundHandler = http.HandlerFunc(notFound)
 	api := router.PathPrefix("/api").Subrouter();
-	api.HandleFunc("/optimizer/{amount}", Optimizer)
 	api.HandleFunc("/menu/{type}", MenuHandler)
-	api.HandleFunc("/sort/{type}/{sortby}", SortHandler)
-	api.HandleFunc("/value/{type}/{sortby}", ValueHandler)
+	api.HandleFunc("/sort/{type}/{property}", SortHandler)
+	api.HandleFunc("/value/{type}/{property}", ValueHandler)
 	return router
 }
