@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"net/http"
 	"sort"
 	"strconv"
@@ -14,24 +13,10 @@ import (
 func MenuHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8");
 	filename := mux.Vars(r)["type"];
-	allowed := []string{"all", "drinks", "food", "sauces"};
-	if !stringInSlice(filename, allowed){
-		json.NewEncoder(w).Encode(jsonErr{
-			Code:http.StatusNotFound,
-			Text: "'" + filename + "' not found. Try available paths: all, drinks, food, sauces.",
-		});
-		return
-	}
-	raw, err := ioutil.ReadFile("./menu/" + filename + ".json")
+	output, err := LoadJSON(w, filename);
 	if err != nil {
-		json.NewEncoder(w).Encode(jsonErr{
-			Code:http.StatusInternalServerError,
-			Text: err.Error(),
-		});
 		return
 	}
-	var output Items;
-	json.Unmarshal(raw, &output)
 	json.NewEncoder(w).Encode(output);
 }
 
