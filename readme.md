@@ -1,5 +1,5 @@
-# taco-bell-optimizer
-An API server that returns information on items from the Taco Bell menu.
+# Taco Bell as a service
+An API server for interacting with nutritional information on items from the Taco Bell menu.
 
 # Usage:
 ```
